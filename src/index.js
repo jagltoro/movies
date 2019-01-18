@@ -1,10 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom';
+import {Provider} from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+import Landing from './Pages/Landing';
+import NowPlaying from './Pages/NowPlaying';
+import Details from './Pages/Details';
+
+import {loadNowMovies} from './actions/movieActions';
+import configureStore from './store/configureStore';
+import * as serviceWorker from './serviceWorker';
+import './assets/css/main.css';
+
+const store = configureStore();
+store.dispatch(loadNowMovies());
+
+
+ReactDOM.render(
+    <Provider store={store}>
+        <Router>
+            <div>
+                <Route exact path="/" component={Landing}/>
+                <Route exact path="/now" component={NowPlaying}/>
+                <Route exact path="/details/:id" component={Details}/>
+            </div>
+        </Router>
+    </Provider>
+    , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
