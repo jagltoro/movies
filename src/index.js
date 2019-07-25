@@ -19,14 +19,13 @@ import './assets/css/main.css';
 const store = configureStore();
 store.dispatch(loadNowMovies());
 
-
 ReactDOM.render(
     <Provider store={store}>
         <Router>
             <div>
-                <Route exact path="/" component={Landing}/>
-                <Route exact path="/now" component={NowPlaying}/>
-                <Route exact path="/details/:id" component={Details}/>
+                <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing}/>
+                <Route exact path={process.env.PUBLIC_URL + '/now'} component={NowPlaying}/>
+                <Route exact path={process.env.PUBLIC_URL + '/details/:id'} component={Details}/>
             </div>
         </Router>
     </Provider>

@@ -2,7 +2,7 @@
   "name": "new-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jesusgonzalez.dev/new-movies",
+  "homepage": "https://jesusgonzalez.dev/movies",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.8.2",
