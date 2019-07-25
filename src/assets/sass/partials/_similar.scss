@@ -1,0 +1,63 @@
+.similar-movies{
+  padding: 15px;
+  .title{
+    margin-bottom: 30px;
+    h3{
+      font-family: $dosis;
+      color: $white;
+      font-weight: 700;
+      size: 24px;
+      small{
+        size: 18px;
+        color: $mainColor;
+      }
+    }
+  }
+  .similar-movie-container{
+    margin-bottom: 20px;
+    .poster-image{
+      img{
+        height: 240px;
+      }
+    }
+    .similar-movie-details{
+      a:hover{
+        text-decoration: none;
+      }
+      h5{
+        font-family: $dosis;
+        color: $white;
+        font-weight: 700;
+        font-size: 20px;
+        small{
+          color: $mainColor;
+        }
+      }
+      .vote{
+        position: relative;
+        font-family: $nunito;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        .fas{
+          margin-right: 10px;
+          font-size: 20px;
+          color: $starColor;
+        }
+        .average{
+          font-weight: 500;
+          font-size: 17px;
+        }
+      }
+      p{
+        font-family: $nunito;
+        color: $overviewText;
+        text-align: justify;
+        font-size: 14px;
+        max-height: 130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

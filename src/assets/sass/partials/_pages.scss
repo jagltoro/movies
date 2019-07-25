@@ -1,55 +1,5 @@
-body{
-  background-size: cover;
-}
 
-.landing{
-  margin-left: -15px;
-  margin-right: -15px;
-  height: calc(100vh - 56px);
-}
 
 .now-playing{
   padding-top: 15px;
-}
-
-.movie-details{
-  padding-top: 100px;
-  .movie-panel{
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 10px;
-    color: white;
-    .col-4{
-      img{
-        border-radius: 10px 0 0 10px;
-      }
-    }
-    .col-8{
-      padding: 15px;
-      h1{
-        width: 80%;
-      }
-      .company-logo{
-        height: 20px;
-        margin-right: 10px;
-      }
-      .movie-details-release{
-        position:absolute;
-        top: 20px;
-        right: 40px;
-      }
-      .movie-details-rating{
-        position:absolute;
-        top: 50px;
-        right: 40px;
-      }
-      .movie-details-description{
-        padding-right: 15px;
-        margin-top: 50px;
-        margin-bottom: 80px;
-      }
-      .badge{
-        margin-right: 10px;
-      }
-    }
-  }
 }

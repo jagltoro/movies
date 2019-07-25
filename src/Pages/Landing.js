@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
+
 import Navbar from '../components/Navbar';
-import Preloader from '../components/Preloader';
+import Search from '../components/Search';
+import NowPlaying from '../Pages/NowPlaying';
 
 class Landing extends Component {
+
+    constructor(props, context) {
+        super(props, context);
+        document.body.style.backgroundImage = '';
+    }
+
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid background-landing">
                 <Navbar/>
-                <div className="row">
-                    <div className="col-12 landing">
-                        {/*<Preloader/>*/}
-                    </div>
+                <div className="container">
+                    <Search/>
+                    <NowPlaying/>
                 </div>
             </div>
         );

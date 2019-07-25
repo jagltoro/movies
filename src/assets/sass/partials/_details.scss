@@ -1,0 +1,141 @@
+.movie-background{
+  height: 70vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute;
+  &:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.8);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+  }
+}
+
+.movie-details{
+  padding-top: 100px;
+  color: white;
+  .movie-poster{
+    position: absolute;
+    width: 28%;
+  }
+  .movie-main-data{
+      padding-top: 50px;
+    .title{
+      font-family: $dosis;
+      font-weight: 700;
+      font-size: 36px;
+      width: 80%;
+      .year{
+        font-size: 24px;
+        margin-left: 10px;
+        color: #4f5b68;
+      }
+    }
+    .vote{
+      hr{
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $mainColor;
+        margin: 1em 0;
+        padding: 0;
+      }
+      .rank{
+        border-right: 1px solid $mainColor;
+        position: relative;
+        font-family: $nunito;
+        font-size: 10px;
+        font-weight: 300;
+        margin-left: 35px;
+        .fas{
+          font-size: 25px;
+          color: $starColor;
+          margin-right: 3px;
+          position: absolute;
+          margin-left: -35px;
+          top: 5px
+        }
+        .average{
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .movie-additional-data{
+    padding-top: 88px;
+    .nav-tabs{
+      border: none;
+      .nav-link{
+        font-family: $dosis;
+        font-weight: 700;
+        font-size: 18px;
+        color: #555555;
+        cursor: pointer;
+        &:hover {
+          border-color: transparent;
+          color: $white;
+        }
+        &.active{
+          color: $white;
+          background-color: transparent;
+          border-color: transparent;
+          text-decoration: underline;
+          font-weight: 800;
+        }
+      }
+    }
+    .overview{
+      padding-top: 50px;
+      font-family: $nunito;
+      color: $overviewText;
+      text-align: justify;
+      .cast{
+        margin-top: 50px;
+        h5{
+          color: $white;
+          font-family: $dosis;
+          font-weight: 700;
+          small{
+            font-family: $nunito;
+            font-size: 14px;
+            color: $mainColor;
+            float: right;
+            padding-top: 8px;
+          }
+          &:after{
+            content: '';
+            display: block;
+            border-bottom: 1px solid $mainColor;
+          }
+        }
+        .cast-item{
+          align-items: center;
+          padding: 15px 0;
+          .img{
+            margin-right: 15px;
+            border-radius: 5px;
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+      .metadata{
+        color: $white;
+        font-family: $nunito;
+        font-size: 14px;
+        h5{
+          font-family: $dosis;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,13 @@ export function searchMovieSuccess(search) {
   return {type: types.SEARCH_MOVIE_SUCCESS, search};
 }
 
+export function loadSimilarSuccess(similar) {
+  return {type: types.LOAD_SIMILAR_SUCCESS, similar};
+}
+export function loadCastSuccess(cast) {
+  return {type: types.LOAD_CAST_SUCCESS, cast};
+}
+
 export function loadNowMovies() {
     return function (dispatch) {
         return fetch(`https://api.themoviedb.org/3/movie/now_playing?&api_key=${apiKey}`)
@@ -63,4 +70,37 @@ export function searchMovie(text) {
         throw(error);
       });
   };
+}
+
+export function loadSimilar(movie) {
+    return function (dispatch) {
+        return fetch(`https://api.themoviedb.org/3/movie/${movie}/similar?&api_key=${apiKey}`)
+            .then(response => {
+                response.json().then(data => ({
+                        data: data,
+                        status: response.status
+                    })
+                ).then(res => {
+                    dispatch(loadSimilarSuccess(res));
+                });
+            }).catch(error => {
+                throw(error);
+            });
+    };
+}
+export function movieCast(movie) {
+    return function (dispatch) {
+        return fetch(`https://api.themoviedb.org/3/movie/${movie}/credits?&api_key=${apiKey}`)
+            .then(response => {
+                response.json().then(data => ({
+                        data: data,
+                        status: response.status
+                    })
+                ).then(res => {
+                    dispatch(loadCastSuccess(res));
+                });
+            }).catch(error => {
+                throw(error);
+            });
+    };
 }

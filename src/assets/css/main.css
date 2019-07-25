@@ -1,159 +1,187 @@
-.navbar {
-  margin-left: -15px;
-  margin-right: -15px; }
-
 body {
-  background-size: cover; }
-
-.landing {
-  margin-left: -15px;
-  margin-right: -15px;
-  height: calc(100vh - 56px); }
+  background-color: #020d18; }
 
 .now-playing {
   padding-top: 15px; }
 
+.background-landing {
+  background: url("/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+
+.movie-background {
+  height: 70vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute; }
+  .movie-background:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; }
+
 .movie-details {
-  padding-top: 100px; }
-  .movie-details .movie-panel {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    color: white; }
-    .movie-details .movie-panel .col-4 img {
-      border-radius: 10px 0 0 10px; }
-    .movie-details .movie-panel .col-8 {
-      padding: 15px; }
-      .movie-details .movie-panel .col-8 h1 {
-        width: 80%; }
-      .movie-details .movie-panel .col-8 .company-logo {
-        height: 20px;
-        margin-right: 10px; }
-      .movie-details .movie-panel .col-8 .movie-details-release {
+  padding-top: 100px;
+  color: white; }
+  .movie-details .movie-poster {
+    position: absolute;
+    width: 28%; }
+  .movie-details .movie-main-data {
+    padding-top: 50px; }
+    .movie-details .movie-main-data .title {
+      font-family: "Dosis", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      width: 80%; }
+      .movie-details .movie-main-data .title .year {
+        font-size: 24px;
+        margin-left: 10px;
+        color: #4f5b68; }
+    .movie-details .movie-main-data .vote hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #607d8b;
+      margin: 1em 0;
+      padding: 0; }
+    .movie-details .movie-main-data .vote .rank {
+      border-right: 1px solid #607d8b;
+      position: relative;
+      font-family: "Nunito", sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      margin-left: 35px; }
+      .movie-details .movie-main-data .vote .rank .fas {
+        font-size: 25px;
+        color: #fff811;
+        margin-right: 3px;
         position: absolute;
-        top: 20px;
-        right: 40px; }
-      .movie-details .movie-panel .col-8 .movie-details-rating {
-        position: absolute;
-        top: 50px;
-        right: 40px; }
-      .movie-details .movie-panel .col-8 .movie-details-description {
-        padding-right: 15px;
-        margin-top: 50px;
-        margin-bottom: 80px; }
-      .movie-details .movie-panel .col-8 .badge {
-        margin-right: 10px; }
+        margin-left: -35px;
+        top: 5px; }
+      .movie-details .movie-main-data .vote .rank .average {
+        font-weight: 500;
+        font-size: 15px; }
+  .movie-details .movie-additional-data {
+    padding-top: 88px; }
+    .movie-details .movie-additional-data .nav-tabs {
+      border: none; }
+      .movie-details .movie-additional-data .nav-tabs .nav-link {
+        font-family: "Dosis", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #555555;
+        cursor: pointer; }
+        .movie-details .movie-additional-data .nav-tabs .nav-link:hover {
+          border-color: transparent;
+          color: #FFFFFF; }
+        .movie-details .movie-additional-data .nav-tabs .nav-link.active {
+          color: #FFFFFF;
+          background-color: transparent;
+          border-color: transparent;
+          text-decoration: underline;
+          font-weight: 800; }
+    .movie-details .movie-additional-data .overview {
+      padding-top: 50px;
+      font-family: "Nunito", sans-serif;
+      color: #abb7c4;
+      text-align: justify; }
+      .movie-details .movie-additional-data .overview .cast {
+        margin-top: 50px; }
+        .movie-details .movie-additional-data .overview .cast h5 {
+          color: #FFFFFF;
+          font-family: "Dosis", sans-serif;
+          font-weight: 700; }
+          .movie-details .movie-additional-data .overview .cast h5 small {
+            font-family: "Nunito", sans-serif;
+            font-size: 14px;
+            color: #607d8b;
+            float: right;
+            padding-top: 8px; }
+          .movie-details .movie-additional-data .overview .cast h5:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #607d8b; }
+        .movie-details .movie-additional-data .overview .cast .cast-item {
+          align-items: center;
+          padding: 15px 0; }
+          .movie-details .movie-additional-data .overview .cast .cast-item .img {
+            margin-right: 15px;
+            border-radius: 5px;
+            height: 40px;
+            width: 40px; }
+      .movie-details .movie-additional-data .overview .metadata {
+        color: #FFFFFF;
+        font-family: "Nunito", sans-serif;
+        font-size: 14px; }
+        .movie-details .movie-additional-data .overview .metadata h5 {
+          font-family: "Dosis", sans-serif;
+          font-weight: 700; }
+
+.navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #607d8b !important; }
+  .navbar .navbar-brand img {
+    height: 75px; }
+  .navbar .navbar-nav .nav-item.active .nav-link {
+    color: #000000; }
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-family: "Dosis", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #555555; }
 
 .base-card {
-  padding: 0 1.7rem;
+  cursor: default;
   margin-bottom: 25px; }
-  .base-card .menu-content {
-    margin: 0;
-    padding: 0;
-    list-style-type: none; }
-    .base-card .menu-content::before, .base-card .menu-content::after {
-      content: '';
-      display: table; }
-    .base-card .menu-content::after {
-      clear: both; }
-    .base-card .menu-content li {
-      display: inline-block; }
-    .base-card .menu-content a {
-      color: #fff; }
-    .base-card .menu-content span {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      font-size: 10px;
-      font-weight: 700;
-      font-family: 'Open Sans';
-      transform: translate(-50%, 0); }
   .base-card .wrapper {
-    background-color: #fff;
-    min-height: 540px;
+    background-color: #FFFFFF;
+    min-height: 400px;
+    width: 100%;
     position: relative;
     overflow: hidden;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2); }
-    .base-card .wrapper:hover .data {
-      transform: translateY(calc(-60px + 4em)); }
   .base-card .data {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    transform: translateY(calc(300px + 1em));
-    transition: transform 0.3s; }
+    width: 100%; }
     .base-card .data .content {
-      padding: 1em;
-      position: relative;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.4); }
-  .base-card .author {
-    font-size: 12px; }
-  .base-card .title {
-    margin-top: 10px; }
-  .base-card .text {
-    height: 430px;
-    margin: 0; }
-  .base-card input[type='checkbox'] {
-    display: none; }
-  .base-card input[type='checkbox']:checked + .menu-content {
-    transform: translateY(-60px); }
-
-.movie-card .wrapper:hover .menu-content span {
-  transform: translate(-50%, -10px);
-  opacity: 1; }
-
-.movie-card .header {
-  color: #fff;
-  padding: 1em; }
-  .movie-card .header::before, .movie-card .header::after {
-    content: '';
-    display: table; }
-  .movie-card .header::after {
-    clear: both; }
-  .movie-card .header .date {
-    float: left;
-    font-size: 12px; }
-
-.movie-card .menu-content {
-  float: right; }
-  .movie-card .menu-content li {
-    margin: 0 5px;
-    position: relative; }
-  .movie-card .menu-content span {
-    transition: all 0.3s;
-    opacity: 0; }
-
-.movie-card .data {
-  color: #fff;
-  transform: translateY(calc(430px + 4em)); }
-
-.movie-card .title a {
-  color: #fff; }
-
-.movie-card .button {
-  display: block;
-  width: 100px;
-  margin: 2em auto 1em;
-  text-align: center;
-  font-size: 12px;
-  color: #fff;
-  line-height: 1;
-  position: relative;
-  font-weight: 700; }
-  .movie-card .button::after {
-    content: '\2192';
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    transition: all 0.3s; }
-  .movie-card .button:hover::after {
-    transform: translate(5px, -50%);
-    opacity: 1; }
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 80px;
+      color: #FFFFFF;
+      padding: 0 15px; }
+      .base-card .data .content .title {
+        font-family: "Dosis", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFFFFF; }
+        .base-card .data .content .title:hover {
+          text-decoration: none;
+          color: #AAAAAA; }
+      .base-card .data .content .vote {
+        position: absolute;
+        bottom: -12px;
+        right: 10px;
+        font-family: "Nunito", sans-serif;
+        font-size: 10px;
+        font-weight: 300; }
+        .base-card .data .content .vote .fas {
+          font-size: 15px;
+          color: #fff811;
+          margin-right: 3px; }
+        .base-card .data .content .vote .average {
+          font-weight: 500;
+          font-size: 15px; }
 
 #preloader {
-  background-color: #df5a49;
+  background-color: #020d18;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -172,60 +200,139 @@ body {
     width: 200px;
     margin-top: -100px;
     margin-left: -100px; }
-  #preloader .object {
-    -moz-border-radius: 50% 50% 50% 50%;
-    -webkit-border-radius: 50% 50% 50% 50%;
-    border-radius: 50% 50% 50% 50%;
+  #preloader .loader-loading {
     position: absolute;
-    border-left: 5px solid #FFF;
-    border-right: 5px solid #FFF;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    -webkit-animation: animate 2s infinite;
+    height: 200px;
     animation: animate 2s infinite; }
-  #preloader #object_one {
-    left: 75px;
-    top: 75px;
-    width: 50px;
-    height: 50px; }
-  #preloader #object_two {
-    left: 65px;
-    top: 65px;
-    width: 70px;
-    height: 70px;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s; }
-  #preloader #object_three {
-    left: 55px;
-    top: 55px;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s; }
-  #preloader #object_four {
-    left: 45px;
-    top: 45px;
-    width: 110px;
-    height: 110px;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s; }
 
 @-webkit-keyframes animate {
-  50% {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
   100% {
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); } }
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
-@keyframes animate {
-  50% {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  100% {
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); } }
+.search-container {
+  padding: 0; }
+  .search-container .search-form {
+    margin-top: 15px; }
+    .search-container .search-form ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #AAAAAA;
+      opacity: 1;
+      /* Firefox */ }
+    .search-container .search-form :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #AAAAAA; }
+    .search-container .search-form ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #AAAAAA; }
+    .search-container .search-form .input-group .input-group-prepend {
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+      .search-container .search-form .input-group .input-group-prepend .dropdown-toggle.btn-lg {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-right: none;
+        height: 52px !important;
+        background-color: #607d8b;
+        border-color: #607d8b; }
+    .search-container .search-form .input-group .form-control {
+      height: 52px !important;
+      border-right: none;
+      border-radius: 0;
+      background-color: #607d8b;
+      border-color: #607d8b;
+      color: #FFFFFF; }
+      .search-container .search-form .input-group .form-control:focus {
+        box-shadow: none; }
+    .search-container .search-form .input-group .input-group-append .input-group-text {
+      border-left: none !important;
+      background-color: #607d8b !important;
+      border-color: #607d8b; }
+      .search-container .search-form .input-group .input-group-append .input-group-text .btn {
+        border-color: transparent !important;
+        background-color: transparent !important; }
+        .search-container .search-form .input-group .input-group-append .input-group-text .btn i {
+          color: #000000; }
+          .search-container .search-form .input-group .input-group-append .input-group-text .btn i:hover {
+            color: #000000; }
+        .search-container .search-form .input-group .input-group-append .input-group-text .btn:hover {
+          color: #000000; }
+
+.cast-crew .crew {
+  margin-top: 50px; }
+  .cast-crew .crew h5 {
+    color: #FFFFFF;
+    font-family: "Dosis", sans-serif;
+    font-weight: 700; }
+    .cast-crew .crew h5 small {
+      font-family: "Nunito", sans-serif;
+      font-size: 14px;
+      color: #607d8b;
+      float: right;
+      padding-top: 8px; }
+    .cast-crew .crew h5:after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #607d8b; }
+  .cast-crew .crew .crew-item {
+    align-items: center;
+    padding: 15px 0; }
+    .cast-crew .crew .crew-item > div {
+      align-items: center;
+      display: flex; }
+    .cast-crew .crew .crew-item .name {
+      display: inline-block;
+      margin-left: 15px; }
+    .cast-crew .crew .crew-item .img {
+      border-radius: 5px;
+      height: 40px;
+      width: 40px; }
+
+.similar-movies {
+  padding: 15px; }
+  .similar-movies .title {
+    margin-bottom: 30px; }
+    .similar-movies .title h3 {
+      font-family: "Dosis", sans-serif;
+      color: #FFFFFF;
+      font-weight: 700;
+      size: 24px; }
+      .similar-movies .title h3 small {
+        size: 18px;
+        color: #607d8b; }
+  .similar-movies .similar-movie-container {
+    margin-bottom: 20px; }
+    .similar-movies .similar-movie-container .poster-image img {
+      height: 240px; }
+    .similar-movies .similar-movie-container .similar-movie-details a:hover {
+      text-decoration: none; }
+    .similar-movies .similar-movie-container .similar-movie-details h5 {
+      font-family: "Dosis", sans-serif;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 20px; }
+      .similar-movies .similar-movie-container .similar-movie-details h5 small {
+        color: #607d8b; }
+    .similar-movies .similar-movie-container .similar-movie-details .vote {
+      position: relative;
+      font-family: "Nunito", sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 20px; }
+      .similar-movies .similar-movie-container .similar-movie-details .vote .fas {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #fff811; }
+      .similar-movies .similar-movie-container .similar-movie-details .vote .average {
+        font-weight: 500;
+        font-size: 17px; }
+    .similar-movies .similar-movie-container .similar-movie-details p {
+      font-family: "Nunito", sans-serif;
+      color: #abb7c4;
+      text-align: justify;
+      font-size: 14px;
+      max-height: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis; }

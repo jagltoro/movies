@@ -1,4 +1,30 @@
-@import "partials/navbar";
+$dosis: 'Dosis', sans-serif;
+$nunito: 'Nunito', sans-serif;
+
+$mainColor: #607d8b;
+
+$white: #FFFFFF;
+$whiteHover: #AAAAAA;
+$overviewText: #abb7c4;
+
+$black: #000000;
+
+$starColor: #fff811;
+$mainBackground: #020d18;
+
+body{
+  background-color: $mainBackground;
+}
+
 @import "partials/pages";
+
+
+@import "partials/index";
+@import "partials/details";
+
+@import "partials/navbar";
 @import "partials/card";
 @import "partials/preloader";
+@import "partials/search";
+@import "partials/crew";
+@import "partials/similar";

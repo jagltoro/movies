@@ -1,0 +1,39 @@
+.cast-crew{
+  .crew{
+    margin-top: 50px;
+    h5{
+      color: $white;
+      font-family: $dosis;
+      font-weight: 700;
+      small{
+        font-family: $nunito;
+        font-size: 14px;
+        color: $mainColor;
+        float: right;
+        padding-top: 8px;
+      }
+      &:after{
+        content: '';
+        display: block;
+        border-bottom: 1px solid $mainColor;
+      }
+    }
+    .crew-item{
+      align-items: center;
+      padding: 15px 0;
+      &>div{
+        align-items: center;
+        display: flex;
+      }
+      .name{
+        display: inline-block;
+        margin-left: 15px;
+      }
+      .img{
+        border-radius: 5px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}

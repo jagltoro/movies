@@ -1,4 +1,25 @@
 .navbar{
   margin-left: -15px;
   margin-right: -15px;
+  background-color: $mainColor !important;
+  .navbar-brand{
+    img{
+      height: 75px;
+    }
+  }
+  .navbar-nav{
+    .nav-item{
+      &.active{
+        .nav-link{
+          color: $black;
+        }
+      }
+      .nav-link{
+        font-family: $dosis;
+        font-weight: 700;
+        font-size: 18px;
+        color: #555555;
+      }
+    }
+  }
 }
