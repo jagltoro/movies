@@ -16,7 +16,7 @@ class NowPlaying extends Component {
                                         <div className="wrapper" style={{ background: `url(https://image.tmdb.org/t/p/w500${movies.poster_path}) center / cover no-repeat` }}>
                                             <div className="data">
                                                 <div className="content">
-                                                    <Link to={`/details/${movies.id}`} className="title">
+                                                    <Link to={`${process.env.PUBLIC_URL}/details/${movies.id}`} className="title">
                                                         {movies.title}
                                                     </Link>
                                                     <p className="vote">
