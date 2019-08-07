@@ -21,9 +21,21 @@
 .movie-details{
   padding-top: 100px;
   color: white;
+  position: relative;
   .movie-poster{
     position: absolute;
-    width: 28%;
+    left: -60px;
+    top: 160px;
+    @media (max-width: 768px) {
+      position: relative;
+      left: unset;
+      top: unset;
+      display: flex;
+      justify-content: center;
+    }
+    .img-fluid{
+      max-width: 120%;
+    }
   }
   .movie-main-data{
       padding-top: 50px;

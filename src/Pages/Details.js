@@ -112,11 +112,11 @@ class Details extends Component {
                         this.props.movieDetails.title &&
                         <div>
                             <div className="row movie-details">
-                                <div className="col-4 movie-poster">
+                                <div className="col-12 col-lg-4 movie-poster">
                                     <img src={`https://image.tmdb.org/t/p/w500${this.props.movieDetails.poster_path}`}
                                          alt="Poster" className="img-fluid"/>
                                 </div>
-                                <div className="col-8 offset-md-4 movie-main-data">
+                                <div className="col-12 col-lg-8 offset-lg-4 movie-main-data">
                                     <h1 className="title">
                                         {this.props.movieDetails.title}
                                         <small className="year">{this.props.movieDetails.release_date.split('-')[0]}</small>
@@ -134,7 +134,7 @@ class Details extends Component {
                                         <hr/>
                                     </div>
                                 </div>
-                                <div className="col-8 offset-md-4 movie-additional-data">
+                                <div className="col-12 col-lg-8 offset-lg-4 movie-additional-data">
                                     <ul className="nav nav-tabs justify-content-around">
                                         <li className="nav-item">
                                             <span className={this.state.showOverview ? "nav-link active" : "nav-link" } onClick={() => this.setState({

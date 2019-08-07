@@ -29,10 +29,21 @@ body {
 
 .movie-details {
   padding-top: 100px;
-  color: white; }
+  color: white;
+  position: relative; }
   .movie-details .movie-poster {
     position: absolute;
-    width: 28%; }
+    left: -60px;
+    top: 160px; }
+    @media (max-width: 768px) {
+      .movie-details .movie-poster {
+        position: relative;
+        left: unset;
+        top: unset;
+        display: flex;
+        justify-content: center; } }
+    .movie-details .movie-poster .img-fluid {
+      max-width: 120%; }
   .movie-details .movie-main-data {
     padding-top: 50px; }
     .movie-details .movie-main-data .title {
@@ -261,7 +272,7 @@ body {
           color: #000000; }
 
 .cast-crew .crew {
-  margin-top: 50px; }
+  margin-top: 60px; }
   .cast-crew .crew h5 {
     color: #FFFFFF;
     font-family: "Dosis", sans-serif;

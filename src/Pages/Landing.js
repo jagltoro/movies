@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Navbar from '../components/Navbar';
-import Search from '../components/Search';
+// import Search from '../components/Search';
 import NowPlaying from '../Pages/NowPlaying';
 
 class Landing extends Component {
@@ -16,7 +16,7 @@ class Landing extends Component {
             <div className="container-fluid background-landing">
                 <Navbar/>
                 <div className="container">
-                    <Search/>
+                    {/*<Search/>*/}
                     <NowPlaying/>
                 </div>
             </div>
