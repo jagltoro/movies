@@ -1,7 +1,8 @@
 
 .base-card {
-  cursor: default;
+  cursor: pointer;
   margin-bottom: 25px;
+
   .wrapper {
     background-color: $white;
     min-height: 400px;
@@ -10,38 +11,45 @@
     overflow: hidden;
     box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
   }
+
   .data {
     position: absolute;
-    bottom: 0;
+    top: 0;
     width: 100%;
+
     .content {
-      background-color: rgba(0,0,0,0.6);
-      height: 80px;
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 30px;
       color: $white;
       padding: 0 15px;
-      .title{
-        font-family: $dosis;
-        font-weight: 700;
-        font-size: 20px;
-        color: $white;
-        &:hover{
-          text-decoration: none;
-          color: $whiteHover;
+      .release-date{
+        font-family: $nunito;
+        font-weight: 500;
+        font-size: 15px;
+        padding-top: 3px;
+        margin-right: -5px;
+        display: flex;
+        justify-content: space-between;
+        .date{
+          font-weight: 900;
         }
       }
-      .vote{
+      .vote {
         position: absolute;
         bottom: -12px;
         right: 10px;
-        .fas{
+
+        .fas {
           font-size: 15px;
           color: $starColor;
           margin-right: 3px;
         }
+
         font-family: $nunito;
         font-size: 10px;
         font-weight: 300;
-        .average{
+
+        .average {
           font-weight: 500;
           font-size: 15px;
         }

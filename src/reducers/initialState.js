@@ -1,7 +1,8 @@
 export default {
   nowPlaying: {},
-  movies: {},
-  similar: {},
-  cast: {},
-  search: {}
+  movieDetails: {},
+  similarMovies: {},
+  movieCast: {},
+  search: {},
+  upcomingMovies: {}
 };

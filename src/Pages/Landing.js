@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
+import React, {useEffect} from 'react';
 
-import Navbar from '../components/Navbar';
-// import Search from '../components/Search';
 import NowPlaying from '../Pages/NowPlaying';
 
-class Landing extends Component {
+function Landing() {
 
-    constructor(props, context) {
-        super(props, context);
-        document.body.style.backgroundImage = '';
-    }
+  useEffect(() => {
+    document.body.style.backgroundImage = '';
+  }, []);
 
-    render() {
-        return (
-            <div className="container-fluid background-landing">
-                <Navbar/>
-                <div className="container">
-                    {/*<Search/>*/}
-                    <NowPlaying/>
-                </div>
-            </div>
-        );
-    }
+  return (
+      <NowPlaying/>
+  );
 }
 
 export default Landing;

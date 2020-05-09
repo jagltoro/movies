@@ -4,21 +4,21 @@
   background-color: $mainColor !important;
   .navbar-brand{
     img{
-      height: 75px;
+      height: 50px;
     }
   }
   .navbar-nav{
     .nav-item{
       &.active{
         .nav-link{
-          color: $black;
+          color: $white;
         }
       }
       .nav-link{
-        font-family: $dosis;
+        font-family: $source;
         font-weight: 700;
         font-size: 18px;
-        color: #555555;
+        color: #7F7F7F;
       }
     }
   }
